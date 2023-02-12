@@ -1,4 +1,4 @@
-LOCAL_PATH := $(call my-dir)
+QCOM_PATH := vendor/hl/config/qcom
 
 pathmap_PROJ := \
     qcom-audio:hardware/qcom-caf/sm8150/audio \
@@ -39,5 +39,5 @@ define project-path-for
 $(foreach n,$(1),$(patsubst $(n):%,%,$(filter $(n):%,$(pathmap_PROJ))))
 endef
 
-include $(LOCAL_PATH)/qcom_boards.mk
-include $(LOCAL_PATH)/utils.mk
+include $(QCOM_PATH)/qcom_boards.mk
+include $(QCOM_PATH)/utils.mk
