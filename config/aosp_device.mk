@@ -1,5 +1,8 @@
 LOCAL_PATH := vendor/hl/config
 
+# Custom
+include $(LOCAL_PATH)/BoardConfigSoong.mk
+
 # Qualcomm platform configurations
 include $(LOCAL_PATH)/qcom/utils.mk
 include $(LOCAL_PATH)/qcom/pathmap.mk
@@ -13,15 +16,20 @@ include hardware/qcom-caf/wlan/Android.mk
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/hl/overlay
 
+# Prebuilt kernel
+PRODUCT_COPY_FILES += \
+    vendor/hl/raphael/Image.gz-dtb:kernel
+
+# DTBO
+BOARD_PREBUILT_DTBOIMAGE := vendor/hl/raphael/dtbo.img
+
+# Kernel headers
+PRODUCT_VENDOR_KERNEL_HEADERS := vendor/hl/raphael/kernel-headers
+
 # Styles & wallpapers
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp_whitelist_com.android.wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.android.wallpaper.xml \
     $(LOCAL_PATH)/permissions/default_com.android.wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default_com.android.wallpaper.xml
-
-# Extra Apps
-PRODUCT_PACKAGES += \
-    SettingsExtra \
-    LedManagerExtra
 
 # Theme picker
 PRODUCT_PACKAGES += \
