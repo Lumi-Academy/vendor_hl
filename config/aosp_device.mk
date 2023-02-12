@@ -1,4 +1,4 @@
-LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := vendor/hl/config
 
 # Qualcomm platform configurations
 include $(LOCAL_PATH)/utils.mk
@@ -15,8 +15,8 @@ DEVICE_PACKAGE_OVERLAYS += vendor/hl/overlay
 
 # Styles & wallpapers
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/permissions/privapp_whitelist_com.android.wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.android.wallpaper.xml \
-    $(LOCAL_PATH)/config/permissions/default_com.android.wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default_com.android.wallpaper.xml
+    $(LOCAL_PATH)/permissions/privapp_whitelist_com.android.wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.android.wallpaper.xml \
+    $(LOCAL_PATH)/permissions/default_com.android.wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default_com.android.wallpaper.xml
 
 # Extra Apps
 PRODUCT_PACKAGES += \

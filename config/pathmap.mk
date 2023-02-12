@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 pathmap_PROJ := \
     qcom-audio:hardware/qcom-caf/sm8150/audio \
     qcom-media:hardware/qcom-caf/sm8150/media \
-    qcom-wlan:hardware/qcom/wlan/sm8150 \
+    qcom-wlan:hardware/qcom-caf/wlan \
     qcom-display:hardware/qcom-caf/sm8150/display \
     qcom-bt-vendor:hardware/qcom-caf/bt \
     qcom-data-ipa-cfg-mgr:vendor/qcom/opensource/data-ipa-cfg-mgr \

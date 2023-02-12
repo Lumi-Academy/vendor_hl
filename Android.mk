@@ -8,6 +8,6 @@ $(KERNEL_OUT):
 	mkdir -p $(KERNEL_OUT)
 
 $(KERNEL_HEADERS_INSTALL): $(KERNEL_OUT)
-	cp -Rf $(LOCAL_PATH)/headers/$(TARGET_DEVICE)/kernel_headers $(KERNEL_HEADERS_INSTALL)
+	cp -Rf $(LOCAL_PATH)/$(TARGET_DEVICE)/kernel_headers $(KERNEL_HEADERS_INSTALL)
 
 endif
