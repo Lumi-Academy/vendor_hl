@@ -11,7 +11,7 @@ include $(LOCAL_PATH)/qcom_target.mk
 include hardware/qcom/wlan/sm8150/Android.mk
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += vendor/hl/overlay
 
 # Styles & wallpapers
 PRODUCT_COPY_FILES += \
