@@ -1,14 +1,14 @@
 LOCAL_PATH := vendor/hl/config
 
 # Qualcomm platform configurations
-include $(LOCAL_PATH)/utils.mk
-include $(LOCAL_PATH)/pathmap.mk
-include $(LOCAL_PATH)/qcom_boards.mk
-include $(LOCAL_PATH)/BoardConfigQcom.mk
-include $(LOCAL_PATH)/qcom_target.mk
+include $(LOCAL_PATH)/qcom/utils.mk
+include $(LOCAL_PATH)/qcom/pathmap.mk
+include $(LOCAL_PATH)/qcom/qcom_boards.mk
+include $(LOCAL_PATH)/qcom/BoardConfigQcom.mk
+include $(LOCAL_PATH)/qcom/qcom_target.mk
 
 # AOSP wlan directory
-include hardware/qcom/wlan/sm8150/Android.mk
+include hardware/qcom-caf/wlan/Android.mk
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/hl/overlay
